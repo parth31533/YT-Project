@@ -74,6 +74,18 @@ Limitations
 Transcripts are only available for videos with subtitles enabled.
 Some videos may fail due to restricted access or missing transcripts.
 API quota limits can restrict the number of requests per day.
+
+Update: 
+Key Changes:
+Integrated process_failed_videos: This function is added at the end of the script and handles the failed videos from the failed_videos.txt file, using AssemblyAI for transcription.
+Error Handling for AssemblyAI: If AssemblyAI can't transcribe a video, the link will be written to failed_assemblyai_videos.txt.
+Now you can run this code, and it will:
+
+Fetch video details from the YouTube channel.
+Attempt to fetch transcripts from YouTube.
+Log videos with failed transcripts to failed_videos.txt.
+Use AssemblyAI to process those failed videos and save their transcripts.
+
 License
 This project is licensed under Apache 2.0.
 
